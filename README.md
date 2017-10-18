@@ -2,14 +2,14 @@
 
 ## Usage
 
-npm install node-excel
+npm install node-excelutil
 
 ### Examples
 
 1. initial from excel file
 
 ```js
-var NodeExcel = require ("./index.js");
+var NodeExcel = require ("node-excelutil");
 // import from a file
 var excel = new NodeExcel(filePath, sheetName);
 // import from a two dimensional arrays

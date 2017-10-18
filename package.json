@@ -1,6 +1,6 @@
 {
-  "name": "node-excel",
-  "version": "1.0.0",
+  "name": "node-excelutil",
+  "version": "1.0.1",
   "description": "provide funtions to hanlde Excel file with NodeJS",
   "main": "index.js",
   "scripts": {
@@ -22,7 +22,7 @@
     "url": "https://github.com/liufanhhh/node-excel/issues"
   },
   "dependencies": {
-    "node-xlsx": "0.11.6"
+    "node-xlsx": "0.11.0"
   },
   "homepage": "https://github.com/liufanhhh/node-excel#readme"
 }
