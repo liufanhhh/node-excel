@@ -41,9 +41,11 @@
 21 silly publish   bugs: { url: 'https://github.com/liufanhhh/node-excel/issues' },
 21 silly publish   dependencies: { 'node-xlsx': '0.11.6' },
 21 silly publish   homepage: 'https://github.com/liufanhhh/node-excel#readme',
-21 silly publish   readme: 'ERROR: No README data found!',
+21 silly publish   readme: '# Node EXCEL\n\n## Usage\n\nnpm install \n\n### Examples\n\n1. Parsing a xlsx from file/buffer, outputs an array of worksheets\n\n```js\nimport xlsx from \'node-xlsx\';\n// Or var xlsx = require(\'node-xlsx\').default;\n\n// Parse a buffer\nconst workSheetsFromBuffer = xlsx.parse(fs.readFileSync(`${__dirname}/myFile.xlsx`));\n// Parse a file\nconst workSheetsFromFile = xlsx.parse(`${__dirname}/myFile.xlsx`);\n```\n\n2. Building a xlsx\n\n```js\nimport xlsx from \'node-xlsx\';\n// Or var xlsx = require(\'node-xlsx\').default;\n\nconst data = [[1, 2, 3], [true, false, null, \'sheetjs\'], [\'foo\', \'bar\', new Date(\'2014-02-19T14:30Z\'), \'0.3\'], [\'baz\', null, \'qux\']];\nvar buffer = xlsx.build([{name: "mySheetName", data: data}]); // Returns a buffer\n```\n\n  * Building a xlsx (spannig multiple rows `A1:A4`)\n```js\nimport xlsx from \'node-xlsx\';\n// Or var xlsx = require(\'node-xlsx\').default;\n\nconst data = [[1, 2, 3], [true, false, null, \'sheetjs\'], [\'foo\', \'bar\', new Date(\'2014-02-19T14:30Z\'), \'0.3\'], [\'baz\', null, \'qux\']];\nconst range = {s: {c: 0, r:0 }, e: {c:0, r:3}}; // A1:A4\nconst option = {\'!merges\': [ range ]};\n\nvar buffer = xlsx.build([{name: "mySheetName", data: data}], option); // Returns a buffer\n```\n  \n\n### Troubleshooting\n\nThis library requires at lease nodeJS v4. For legacy versions, you can use this workaround before using the lib.\n\n```\nnpm i --save object-assign\nObject.prototype.assign = require(\'object-assign\');\n``` \n\n\n### Contributing\n\nPlease submit all pull requests the against master branch. If your unit test contains javascript patches or features, you should include relevant unit tests. Thanks!\n\n\n### Available scripts\n\n| **Script** | **Description** |\n|----------|-------|\n| start | Alias of test:watch |\n| test | Run mocha unit tests |\n| test:watch | Run and watch mocha unit tests |\n| lint | Run eslint static tests |\n| compile | Compile the library |\n| compile:watch | Compile and watch the library |\n\n\n## Authors\n\n**Olivier Louvignes**\n\n+ http://olouv.com\n+ http://github.com/mgcrea\n\n\n## Copyright and license\n\n[Apache License 2.0](https://spdx.org/licenses/Apache-2.0.html)\n\n```\nCopyright (C) 2012-2014  Olivier Louvignes\n\n   Licensed under the Apache License, Version 2.0 (the "License");\n   you may not use this file except in compliance with the License.\n   You may obtain a copy of the License at\n\n       http://www.apache.org/licenses/LICENSE-2.0\n\n   Unless required by applicable law or agreed to in writing, software\n   distributed under the License is distributed on an "AS IS" BASIS,\n   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.\n   See the License for the specific language governing permissions and\n   limitations under the License.\n\nExcept where noted, this license applies to any and all software programs and associated documentation files created by the Original Author and distributed with the Software:\n\nInspired by SheetJS gist examples, Copyright (c) SheetJS.\n```',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '7afe6543b9e4d35d6bd52d4105849db4945ad3cd',
 21 silly publish   _id: 'node-excel@1.0.0',
-21 silly publish   _shasum: '077727f4bac220865ba558f9575f7f03fa3cd9bd',
+21 silly publish   _shasum: '2f1c006e83727a4e67ad88f745242508559acc4e',
 21 silly publish   _from: '.' }
 22 verbose getPublishConfig undefined
 23 silly mapToRegistry name node-excel
@@ -62,22 +64,22 @@
 29 silly publish uploading /Users/fan.liu/.npm/node-excel/1.0.0/package.tgz
 30 verbose request uri https://registry.npmjs.org/node-excel
 31 verbose request sending authorization for write operation
-32 info attempt registry request try #1 at 2:15:00 PM
+32 info attempt registry request try #1 at 3:00:17 PM
 33 verbose request using bearer token for auth
-34 verbose request id eb19bb81bbb604f5
+34 verbose request id 855b394c2cc9c512
 35 http request PUT https://registry.npmjs.org/node-excel
 36 http 403 https://registry.npmjs.org/node-excel
 37 verbose headers { 'content-type': 'application/json',
 37 verbose headers   'cache-control': 'max-age=300',
 37 verbose headers   'content-length': '104',
 37 verbose headers   'accept-ranges': 'bytes',
-37 verbose headers   date: 'Wed, 18 Oct 2017 06:15:02 GMT',
+37 verbose headers   date: 'Wed, 18 Oct 2017 07:00:18 GMT',
 37 verbose headers   via: '1.1 varnish',
 37 verbose headers   connection: 'keep-alive',
-37 verbose headers   'x-served-by': 'cache-nrt6133-NRT',
+37 verbose headers   'x-served-by': 'cache-bur17536-BUR',
 37 verbose headers   'x-cache': 'MISS',
 37 verbose headers   'x-cache-hits': '0',
-37 verbose headers   'x-timer': 'S1508307301.273297,VS0,VE1297',
+37 verbose headers   'x-timer': 'S1508310018.057888,VS0,VE634',
 37 verbose headers   vary: 'Accept-Encoding, Accept' }
 38 verbose request invalidating /Users/fan.liu/.npm/registry.npmjs.org/node-excel on PUT
 39 error publish Failed PUT 403
